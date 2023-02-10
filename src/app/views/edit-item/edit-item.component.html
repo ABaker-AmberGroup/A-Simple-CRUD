@@ -1,0 +1,40 @@
+<div class="bg-[#456EA3] min-h-screen p-8">
+    <div class="max-w-max mx-auto bg-white p-4">
+        <h1 class="text-center text-2xl mb-4 uppercase">Edit user</h1>
+        <form (submit)="handleSubmit()">
+            <!-- Name container -->
+            <div class="flex gap-8">
+                <div class="mb-4">
+                    <label for="first_nm" class="text-sm text-gray-600">First Name</label><br>
+                    <input type="text" for="first_nm" name="first_nm" class="p-[4px] rounded-md outline outline-[1px] outline-gray-600" [(ngModel)]="data.first_nm">
+                </div>
+                <div class="mb-4">
+                    <label for="last_nm" class="text-sm text-gray-600">Last Name</label><br>
+                    <input type="text" for="last_nm" name="last_nm" ngModel class="p-[4px] rounded-md outline outline-[1px] outline-gray-600" [(ngModel)]="data.last_nm">
+                </div>
+            </div>
+    
+            <!-- Contact container -->
+            <div class="flex gap-8">
+                <div class="mb-4">
+                    <label for="email" class="text-sm text-gray-600">Email</label><br>
+                    <input type="text" for="email" name="email" ngModel class="p-[4px] rounded-md outline outline-[1px] outline-gray-600" [(ngModel)]="data.email">
+                </div>
+                <div class="mb-4">
+                    <label for="phone_num" class="text-sm text-gray-600">phone number</label><br>
+                    <input type="text" for="phone_num" name="phone_num" ngModel class="p-[4px] rounded-md outline outline-[1px] outline-gray-600" [(ngModel)]="data.phone_num">
+                </div>
+            </div>
+    
+            <div class="mb-8">
+                <label for="address" class="text-sm text-gray-600">Address</label><br>
+                <input type="text" for="address" name="address" ngModel class="p-[4px] rounded-md outline outline-[1px] outline-gray-600 w-full" [(ngModel)]="data.address">
+            </div>
+    
+            <div class="flex items-center gap-4">
+                <button type="submit" class="bg-[#456EA3] text-white py-2 px-4 rounded-md w-[80px] text-center hover:shadow-sm hover:bg-white hover:text-black hover:shadow-gray-400 ease-in-out duration-500">Update</button> 
+                <a routerLink="/" type="" class=" outline outline-2 outline-red-800 py-2 px-4 rounded-md w-[80px] text-center hover:bg-red-800 hover:text-white hover:outline-none ease-in-out duration-500">Cancel</a> 
+            </div>
+        </form>
+    </div>
+</div>
